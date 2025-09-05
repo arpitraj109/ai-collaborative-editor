@@ -1,0 +1,82 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* Apply full height so app covers the viewport */
+:root, html, body, #root {
+  height: 100%;
+}
+
+/* ProseMirror CSS for proper text handling */
+.ProseMirror {
+  white-space: pre-wrap;
+  word-wrap: break-word;
+  outline: none;
+}
+
+/* Placeholder styling */
+.ProseMirror p.is-empty:first-child::before {
+  content: attr(data-placeholder);
+  float: left;
+  color: #9ca3af;
+  pointer-events: none;
+  height: 0;
+}
+
+.ProseMirror.is-editor-empty p:first-child::before {
+  content: attr(data-placeholder);
+  float: left;
+  color: #9ca3af;
+  pointer-events: none;
+  height: 0;
+}
+
+.ProseMirror p {
+  margin: 0.5em 0;
+}
+
+.ProseMirror p:first-child {
+  margin-top: 0;
+}
+
+.ProseMirror p:last-child {
+  margin-bottom: 0;
+}
+
+.ProseMirror h1, .ProseMirror h2, .ProseMirror h3, .ProseMirror h4, .ProseMirror h5, .ProseMirror h6 {
+  margin: 1em 0 0.5em 0;
+  font-weight: bold;
+}
+
+.ProseMirror h1:first-child, .ProseMirror h2:first-child, .ProseMirror h3:first-child, 
+.ProseMirror h4:first-child, .ProseMirror h5:first-child, .ProseMirror h6:first-child {
+  margin-top: 0;
+}
+
+.ProseMirror ul, .ProseMirror ol {
+  margin: 0.5em 0;
+  padding-left: 1.5em;
+}
+
+.ProseMirror blockquote {
+  margin: 0.5em 0;
+  padding-left: 1em;
+  border-left: 3px solid #e5e7eb;
+  color: #6b7280;
+}
+
+.ProseMirror strong {
+  font-weight: bold;
+}
+
+.ProseMirror em {
+  font-style: italic;
+}
+
+.ProseMirror u {
+  text-decoration: underline;
+}
+
+.ProseMirror s {
+  text-decoration: line-through;
+}
