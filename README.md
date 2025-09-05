@@ -1,12 +1,59 @@
-# React + Vite
+# AI Collaborative Editor - Setup Guide
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## 🚀 Quick Start
 
-Currently, two official plugins are available:
+1. **Install dependencies:**
+   ```bash
+   npm install
+   ```
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+2. **Set up API key:**
+   - Create a `.env` file in the project root
+   - Add your OpenRouter API key:
+   ```
+   VITE_OPENROUTER_API_KEY=your_api_key_here
+   ```
+   - Get your API key from: https://openrouter.ai/keys
 
-## Expanding the ESLint configuration
+3. **Start the development server:**
+   ```bash
+   npm run dev
+   ```
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## ✨ Features Implemented
+
+### ✅ Core Features
+- **Rich Text Editor** with TipTap
+- **AI Chat Sidebar** with OpenRouter integration
+- **Floating AI Toolbar** on text selection
+- **Preview Modal** for AI suggestions
+- **Web Search Agent** with `/agent` command
+
+### 🎯 How to Test
+
+1. **Chat with AI:**
+   - Type "Hello AI" in the chat sidebar
+   - Try: `/agent search for latest news`
+
+2. **AI Text Editing:**
+   - Type some text in the editor
+   - Select the text with your mouse
+   - See the floating toolbar appear
+   - Click "Improve", "Summarize", or "Make Shorter"
+
+3. **Preview Modal:**
+   - After selecting an AI action, see the preview modal
+   - Compare original vs AI suggestion
+   - Click "Apply Changes" or "Cancel"
+
+## 🔧 Troubleshooting
+
+- **Floating toolbar not showing?** Make sure you select text (not just click)
+- **AI not responding?** Check your API key in `.env` file
+- **Styling issues?** The app uses inline styles as fallback
+
+## 📱 Responsive Design
+- Desktop: Sidebar always visible
+- Mobile: Sidebar slides in/out
+- Touch-friendly buttons and interactions
+- 
